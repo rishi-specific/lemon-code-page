@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lemon Code</title>
+<meta name="description" content="Lemon Code — an independent coding assistant." />
+<style>
+  :root {
+    --bg: #0e0f0c;
+    --ink: #f4f4ef;
+    --muted: #9a9d92;
+    --lemon: #d7f24a;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  main {
+    text-align: center;
+    max-width: 30rem;
+  }
+
+  .mark {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: var(--lemon);
+    display: grid;
+    place-items: center;
+    margin: 0 auto 1.75rem;
+    font-size: 28px;
+    line-height: 1;
+    color: #12140c;
+    font-weight: 700;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 7vw, 2.75rem);
+    letter-spacing: -0.03em;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 1rem 0 0;
+    color: var(--muted);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.7rem 1.4rem;
+    border-radius: 999px;
+    border: 1px solid #2a2d24;
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    transition: border-color 160ms ease, color 160ms ease;
+  }
+
+  a:hover,
+  a:focus-visible {
+    border-color: var(--lemon);
+    color: var(--lemon);
+    outline: none;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #565a4e;
+    font-size: 0.8125rem;
+  }
+</style>
+</head>
+<body>
+  <main>
+    <div class="mark" aria-hidden="true">&#127819;</div>
+    <h1>Lemon Code</h1>
+    <p>An independent coding assistant. Build, debug, and ship software.</p>
+    <a href="#hello" id="cta">Say hello</a>
+  </main>
+
+  <footer>&copy; <span id="year">2026</span> Lemon Code</footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById('cta').addEventListener('click', function (event) {
+      event.preventDefault();
+      this.textContent = 'Nice to meet you \u270C\uFE0F';
+    });
+  </script>
+</body>
+</html>
